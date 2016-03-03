@@ -9,7 +9,11 @@ var figc = require('figc');
 var config = figc(__dirname + '/config.json');
 var argv = require('minimist')(process.argv.slice(2));
 
-var apiKey = process.env.WPT_API_KEY || config.apiKey;
+var apiKey = process.env.WPT_API_KEY || argv.apiKey || config.apiKey;
+if (!apiKey) {
+  console.log('Please specify an api key.');
+  process.exit(1);
+}
 
 var WebPageTest = require('webpagetest');
 var wpt = new WebPageTest('www.webpagetest.org', apiKey);
@@ -45,6 +49,12 @@ function testResults (err, results) {
     console.log('Error: ', err);
     return;
   }
+
+  if (results && results[0].statusCode !== 200) {
+    console.log('Error: ', results[0]);
+    return;
+  }
+  debug('results', results);
 
   var testIds = results.map(function (result) { return result.data.testId; });
   var detailUrlTemplate = 'http://www.webpagetest.org/result/%s/1/details/';
