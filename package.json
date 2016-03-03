@@ -13,6 +13,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "https://github.com/sandinmyjoints/wptgo.git"
+  },
   "author": "William Bert <william@spanishdict.com>",
   "license": "BSD",
   "dependencies": {
