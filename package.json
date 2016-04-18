@@ -1,6 +1,6 @@
 {
   "name": "wptgo",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Super-simple test launcher for Webpagetest (WPT)",
   "keywords": [
     "wpt",
@@ -13,10 +13,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/sandinmyjoints/wptgo.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sandinmyjoints/wptgo.git"
   },
   "author": "William Bert <william@spanishdict.com>",
   "license": "ISC",
