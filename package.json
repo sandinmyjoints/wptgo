@@ -19,7 +19,7 @@
     "url" : "https://github.com/sandinmyjoints/wptgo.git"
   },
   "author": "William Bert <william@spanishdict.com>",
-  "license": "BSD",
+  "license": "ISC",
   "dependencies": {
     "async": "1.5.2",
     "debug": "2.2.0",
